@@ -5,11 +5,17 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* universal */
 
-/*img {
-/*  display: none;
-/*}
+/*img {*/
+/*  display: none;*/
+/*}*/
 
 body {
   padding-top: 60px;
@@ -31,7 +37,6 @@ textarea {
 }
 
 
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +48,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
 /*Prueba para mejorar visivilización de los titulos de pagina */
-  margin-top: 60px;
+  margin-top: 60px; 
   text-align: center;
 }
 
@@ -79,7 +84,6 @@ p {
 }
 
 
-
 /* footer */
 
 footer {
@@ -105,5 +109,16 @@ footer {
   	float: left;
  	margin-left: 15px;
 	}
-  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing; 
+}
+
 } 
